@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Учебная страница-резюме — Коренков Александр." />
+  <title>Резюме — Коренков Александр</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__brand" href="#hero" data-i18n="brand">Коренков Александр</a>
+
+    <details class="header__menu" aria-label="Меню">
+      <summary class="header__menu-summary" aria-haspopup="true" aria-expanded="false">Меню ▾</summary>
+      <ul class="header__menu-list">
+        <li class="header__menu-item"><a class="header__menu-link" href="#projects" data-i18n="navProjects">Проекты</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#about" data-i18n="navAbout">Обо мне</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#contacts" data-i18n="navContacts">Контакты</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+
+<main class="main container">
+  <section class="grid4" role="main">
+    <div class="grid4__cell grid4__cell--photo" id="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="visually-hidden">Фото</h1>
+      <div class="photo">
+        <div class="photo__placeholder">Здесь должно быть фото (пока нет)</div>
+      </div>
+    </div>
+
+    <aside class="grid4__cell grid4__cell--projects" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="projects__title" data-i18n="projectsTitle">Проекты</h2>
+      <p class="projects__note" data-i18n="projectsNote">Небольшие учебные проекты.</p>
+
+      <div class="projects-controls" aria-hidden="false">
+        <div class="projects-controls__row">
+          <label class="projects-controls__search-label visually-hidden" for="projects-search">Поиск проектов</label>
+          <input id="projects-search" class="projects-controls__search" type="search" placeholder="Поиск (название, роль, описание)" data-i18n-placeholder="searchPlaceholder" />
+
+          <select id="projects-sort" class="projects-controls__sort" aria-label="Сортировка">
+            <option value="name-asc" data-i18n="sortNameAsc">Имя ↑</option>
+            <option value="name-desc" data-i18n="sortNameDesc">Имя ↓</option>
+            <option value="date-desc" data-i18n="sortDateDesc">По дате (свежие)</option>
+            <option value="pop-desc" data-i18n="sortPopDesc">По популярности</option>
+          </select>
+
+          <div class="projects-controls__view" role="radiogroup" aria-label="Вид списка">
+            <button class="projects-controls__view-btn projects-controls__view-btn--cards" data-view="cards" aria-pressed="true" title="Карточки" aria-label="Карточки">▦</button>
+            <button class="projects-controls__view-btn projects-controls__view-btn--list" data-view="list" aria-pressed="false" title="Список" aria-label="Список">≡</button>
+          </div>
+        </div>
+
+        <div class="projects-controls__filters" aria-label="Фильтры по языкам/ролям">
+          <span class="projects-controls__filters-title" data-i18n="filterTitle">Фильтры:</span>
+
+          <label class="projects-controls__filter">
+            <input type="checkbox" value="javascript" class="projects-controls__filter-input" />
+            <span class="projects-controls__filter-label">JavaScript</span>
+          </label>
+
+          <label class="projects-controls__filter">
+            <input type="checkbox" value="python" class="projects-controls__filter-input" />
+            <span class="projects-controls__filter-label">Python</span>
+          </label>
+
+          <label class="projects-controls__filter">
+            <input type="checkbox" value="верстка" class="projects-controls__filter-input" />
+            <span class="projects-controls__filter-label">Верстка</span>
+          </label>
+
+          <label class="projects-controls__filter">
+            <input type="checkbox" value="devops" class="projects-controls__filter-input" />
+            <span class="projects-controls__filter-label">DevOps</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="projects__list" id="projects-list" data-empty-i18n="noResults">
+        <article class="project-card" aria-labelledby="p-life" tabindex="0"
+                 data-title="LifeLeveler"
+                 data-desc="ToDo VK Mini App — учебный фронтенд-проект, верстка и деплой."
+                 data-tags="javascript,верстка"
+                 data-date="2025-09-25"
+                 data-popularity="15">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-life" class="project-card__title" data-i18n="p_life_title">LifeLeveler</h3>
+          <p class="project-card__role">Роли: верстка, фронтенд</p>
+          <p class="project-card__desc" data-i18n="p_life_desc">Учебный ToDo-приложение для VK Mini Apps, реализовано на JavaScript.</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/LifeLeveler" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+
+        <article class="project-card" aria-labelledby="p-inv" tabindex="0"
+                 data-title="invarders"
+                 data-desc="Python-игра/учебный проект."
+                 data-tags="python"
+                 data-date="2023-02-09"
+                 data-popularity="8">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-inv" class="project-card__title" data-i18n="p_inv_title">invarders</h3>
+          <p class="project-card__role">Роли: Python</p>
+          <p class="project-card__desc" data-i18n="p_inv_desc">Учебный проект на Python (игровая логика/визуализация).</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/invarders" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+
+        <article class="project-card" aria-labelledby="p-gitflow" tabindex="0"
+                 data-title="gitflow"
+                 data-desc="Скрипты/утилиты для работы с git."
+                 data-tags="python,devops"
+                 data-date="2022-12-13"
+                 data-popularity="6">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-gitflow" class="project-card__title" data-i18n="p_gitflow_title">gitflow</h3>
+          <p class="project-card__role">Роли: Python, DevOps</p>
+          <p class="project-card__desc" data-i18n="p_gitflow_desc">Скрипты и утилиты для демонстрации gitflow.</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/gitflow" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+
+        <article class="project-card" aria-labelledby="p-rc" tabindex="0"
+                 data-title="random_circles"
+                 data-desc="Генерация кругов — визуальный пример."
+                 data-tags="python"
+                 data-date="2022-12-06"
+                 data-popularity="4">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-rc" class="project-card__title" data-i18n="p_rc_title">random_circles</h3>
+          <p class="project-card__role">Роли: Python</p>
+          <p class="project-card__desc" data-i18n="p_rc_desc">Учебный пример: генерация случайных кругов/визуализация.</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/random_circles" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+
+        <article class="project-card" aria-labelledby="p-yc" tabindex="0"
+                 data-title="yellow_circles"
+                 data-desc="Графический учебный пример."
+                 data-tags="python"
+                 data-date="2022-12-06"
+                 data-popularity="3">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-yc" class="project-card__title" data-i18n="p_yc_title">yellow_circles</h3>
+          <p class="project-card__role">Роли: Python</p>
+          <p class="project-card__desc" data-i18n="p_yc_desc">Графический учебный проект — вариация на тему кругов.</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/yellow_circles" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+
+        <article class="project-card" aria-labelledby="p-pp" tabindex="0"
+                 data-title="Pavlovskiy-Posad---Korenkov"
+                 data-desc="Учебная работа на Python."
+                 data-tags="python"
+                 data-date="2022-12-04"
+                 data-popularity="5">
+          <div class="project-card__thumb" aria-hidden="true">скрин</div>
+          <h3 id="p-pp" class="project-card__title" data-i18n="p_pp_title">Pavlovskiy-Posad — Korenkov</h3>
+          <p class="project-card__role">Роли: Python</p>
+          <p class="project-card__desc" data-i18n="p_pp_desc">Учебная работа на Python, связанная с задачей/данными по теме.</p>
+          <a class="project-card__link" href="https://github.com/W1nt0reze/Pavlovskiy-Posad---Korenkov" target="_blank" rel="noopener noreferrer">репозиторий</a>
+        </article>
+      </div>
+
+      <div id="projects-empty" class="projects__empty visually-hidden" role="status" aria-live="polite">Ничего не найдено</div>
+
+      <div class="projects-controls__toggle" style="margin-top:12px">
+        <button id="projects-toggle" class="btn btn--ghost" aria-pressed="false" data-i18n="showAllBtn">Показать все</button>
+      </div>
+    </aside>
+
+    <section class="grid4__cell grid4__cell--about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="about__title" data-i18n="aboutTitle">Обо мне</h2>
+      <p class="about__text" data-i18n="aboutText">I am an HSE student, learning programming. I write Java, C++ and Python.</p>
+
+      <ul class="about__list">
+        <li class="about__item" data-i18n="aboutLangs">Языки: Java, C++, Python (на уровне учебных задач)</li>
+        <li class="about__item" data-i18n="aboutTools">Инструменты: Git, Gradle (понимаю основы)</li>
+        <li class="about__item" data-i18n="aboutWant">Хочу: стажировка, помощь наставника</li>
+      </ul>
+    </section>
+
+    <aside class="grid4__cell grid4__cell--contact" id="contacts" aria-labelledby="contacts-title">
+      <h2 id="contacts-title" class="contact__title" data-i18n="contactTitle">Форма обратной связи</h2>
+
+      <form class="contact-form" action="#" method="post" aria-label="Форма обратной связи ученика" novalidate>
+        <label class="contact-form__row">
+          <span class="contact-form__label" data-i18n="labelName">Ваше имя</span>
+          <input class="contact-form__input" type="text" name="name" placeholder="Имя" data-i18n-placeholder="phName" required>
+        </label>
+
+        <label class="contact-form__row">
+          <span class="contact-form__label" data-i18n="labelEmail">Почта</span>
+          <input class="contact-form__input" type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="phEmail" required>
+        </label>
+
+        <label class="contact-form__row">
+          <span class="contact-form__label" data-i18n="labelMessage">Сообщение</span>
+          <textarea class="contact-form__input" name="message" rows="4" placeholder="Коротко, например: хочу пройти стажировку" data-i18n-placeholder="phMessage" required></textarea>
+        </label>
+
+        <div class="contact-form__actions">
+          <button class="btn btn--primary" type="submit" data-i18n="sendBtn">Отправить</button>
+        </div>
+      </form>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__text">© <span id="year">2025</span> — учебная страница</div>
+
+    <div class="footer__controls">
+      <div class="footer__toggle">
+        <button id="theme-toggle" class="toggle-btn" role="switch" aria-pressed="false" aria-label="Сменить тему">🌙</button>
+      </div>
+
+      <div class="footer__lang">
+        <button id="lang-ru" class="lang-btn" aria-pressed="true">RU</button>
+        <button id="lang-en" class="lang-btn" aria-pressed="false">EN</button>
+      </div>
+
+      <div class="footer__contacts">
+        <a class="footer__link" href="./docx/ux-analysis.pdf" target="_blank" rel="noopener noreferrer" data-i18n="uxLink">UX-анализ (PDF)</a>
+        <a class="footer__link" href="mailto:askorenkov@edu.hse.ru">✉ askorenkov@edu.hse.ru</a>
+        <a class="footer__link" href="https://github.com/W1nt0reze" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="footer__link" href="https://t.me/W1nt0reze" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
