@@ -9,3 +9,5 @@
 Сайт расположен по адресу: https://w1nt0reze.github.io/resume/
 
 Шаг 3: Создание папки docs/ и перенос файлов (index.html, script.js, styles.css) в неё
+
+Шаг 4: Изменение название папки docs/ на src/, создание файла deploy-pages.yml
